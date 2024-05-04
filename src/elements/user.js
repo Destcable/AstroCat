@@ -10,3 +10,5 @@ const user = () => {
 
     return element;
 };
+
+export default user;

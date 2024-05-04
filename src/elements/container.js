@@ -9,3 +9,5 @@ const container = () => {
 
     return container;
 };
+
+export default container;

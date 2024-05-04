@@ -1,3 +1,7 @@
+import container from "./src/elements/container";
+import user from "./src/elements/user";
+import onClickFieldPlay from "./src/events/onClickFieldPlay";
+
 const body = document.querySelector('body');
 
 body.appendChild( container() );
@@ -5,7 +9,6 @@ body.appendChild( container() );
 const containerElement = document.getElementById( 'container' );
 
 containerElement.appendChild( user() );
-
 
 const userElement = document.getElementById( 'userElement' );
 

@@ -5,3 +5,5 @@ const onClickFieldPlay = (user, container, step = 80) => {
         }
     };
 };
+
+export default onClickFieldPlay;
