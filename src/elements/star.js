@@ -2,7 +2,7 @@ import container from "./container";
 const star = () => { 
     const element = document.createElement('img');
 
-    element.src = './src/elements/img/star.png'
+    element.src = './public/star.png'
     element.id = 'star-point';
     element.style.width = '24px';
     element.style.height = '24px';
