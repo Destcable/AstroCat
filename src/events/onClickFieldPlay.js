@@ -1,4 +1,5 @@
 import fallUser from "../features/fallUser";
+import starCore from "../features/starCore";
 import store from "../reducer";
 import isCollide from "../utils/isCollide";
 
@@ -21,7 +22,7 @@ const onClickFieldPlay = (user, container, step = 80) => {
 
         starPoints.forEach(point => {
             if ( isCollide( user, point ) ) { 
-                container.removeChild( point );
+                starCore.clear(point);
                 store.dispatch({ type: 'stars/increment' });
                 console.log(store.getState().stars);
             }
