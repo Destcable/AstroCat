@@ -12,7 +12,8 @@ containerElement.appendChild( user() );
 
 const userElement = document.getElementById( 'userElement' );
 
-setTimeout(() => { fallUser.start(userElement, containerElement); }, 1500);
-setTimeout(() => { fallUser.stop(); }, 2000)
+
+// setTimeout(() => { fallUser.start(userElement, containerElement); }, 1500);
+// setTimeout(() => { fallUser.stop(); }, 2000)
 
 onClickFieldPlay(userElement, containerElement);

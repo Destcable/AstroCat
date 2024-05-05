@@ -7,6 +7,7 @@ const user = () => {
     element.style.backgroundColor = 'red';
     element.style.position = 'absolute';
     element.style.top = '0';
+    element.style.bottom = '0';
 
     return element;
 };
