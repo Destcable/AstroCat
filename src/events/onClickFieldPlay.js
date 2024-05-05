@@ -1,13 +1,11 @@
 import fallUser from "../features/fallUser";
 
 const onClickFieldPlay = (user, container, step = 80) => { 
-    const userElement = document.getElementById( 'userElement' );
-    const containerElement = document.getElementById( 'container' );
     let isStart = false;
 
     container.onclick = () => { 
         if ( !isStart ) { 
-            fallUser.start(userElement, containerElement);
+            fallUser.start(user, container);
             isStart = true;
         }
         

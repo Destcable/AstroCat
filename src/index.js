@@ -4,16 +4,12 @@ import onClickFieldPlay from "./events/onClickFieldPlay";
 import fallUser from "./features/fallUser";
 
 const body = document.querySelector('body');
-body.appendChild( container() );
+body.appendChild( container );
+container.appendChild( user );
 
-const containerElement = document.getElementById( 'container' );
-
-containerElement.appendChild( user() );
-
-const userElement = document.getElementById( 'userElement' );
 
 
 // setTimeout(() => { fallUser.start(userElement, containerElement); }, 1500);
 // setTimeout(() => { fallUser.stop(); }, 2000)
 
-onClickFieldPlay(userElement, containerElement);
+onClickFieldPlay(user, container);
