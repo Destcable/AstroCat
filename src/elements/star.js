@@ -8,7 +8,8 @@ const star = () => {
     element.style.position = 'absolute';
     element.style.left = Math.floor(Math.random() * (container.offsetWidth - 20)) + 'px';
     element.style.top = Math.floor(Math.random() * (container.offsetHeight - 20)) + 'px';
-    
+    element.style.pointerEvents = 'none';
+
     return element;    
 }
 

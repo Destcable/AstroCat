@@ -6,7 +6,7 @@ import starCore from "./features/starCore";
 
 const body = document.querySelector('body');
 body.appendChild( container );
-starCore.generate();
+starCore.generate(20);
 container.appendChild( user );
 
 onClickFieldPlay(user, container);
