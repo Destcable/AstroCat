@@ -10,9 +10,4 @@ for (let i = 0; i < 5; i++) container.appendChild( star() );
 
 container.appendChild( user );
 
-
-
-// setTimeout(() => { fallUser.start(userElement, containerElement); }, 1500);
-// setTimeout(() => { fallUser.stop(); }, 2000)
-
 onClickFieldPlay(user, container);
