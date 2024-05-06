@@ -7,7 +7,7 @@ import store from "./reducer";
 
 const body = document.querySelector('body');
 body.appendChild( container );
-starCore.generate(20);
+starCore.generate( 20 );
 container.appendChild( user );
 
 fallUser.waitStop(() => { 
