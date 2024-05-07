@@ -2,8 +2,10 @@ import container from "./elements/container";
 import user from "./elements/user";
 import onClickFieldPlay from "./events/onClickFieldPlay";
 import fallUser from "./features/fallUser";
+import fuel from "./features/fuel";
 import starCore from "./features/starCore";
 import store from "./reducer";
+import isCollide from "./utils/isCollide";
 
 const body = document.querySelector('body');
 body.appendChild( container );
@@ -19,4 +21,10 @@ fallUser.waitStop(() => {
     store.dispatch({ type: 'isPlay/stop' });
 });
 
-onClickFieldPlay(user, container);
+onClickFieldPlay(startClick);
+
+function startClick() { 
+    fallUser.start(user, container);
+    user.style.bottom = '90px';
+    fuel.set(5);
+};

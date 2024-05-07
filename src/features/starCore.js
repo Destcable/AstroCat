@@ -12,6 +12,9 @@ const starCore = {
     },
     clear: ( starPoint ) => { 
         container.removeChild( starPoint );
+    },
+    getAll: () => { 
+        return document.querySelectorAll('#star-point');
     }
 };
 

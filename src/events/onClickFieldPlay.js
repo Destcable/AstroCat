@@ -1,33 +1,32 @@
-import fallUser from "../features/fallUser";
+import container from "../elements/container";
+import user from "../elements/user";
 import starCore from "../features/starCore";
+import fuel from "../features/fuel";
 import store from "../reducer";
 import isCollide from "../utils/isCollide";
 
-const onClickFieldPlay = (user, container, step = 80) => { 
+const onClickFieldPlay = (startClick, step = 80) => { 
     let isStart = false;
-    const starPoints = document.querySelectorAll('#star-point');
 
-    container.onclick = () => { 
+    container.onclick = ()  => { 
         const storeValues = store.getState();
         
         if ( !isStart ) {
-            fallUser.start(user, container);
             isStart = true;
-            user.style.bottom = '90px'
+            startClick();
         }
-
+        if ( !fuel.get() ) return false;
         if ( !storeValues.isPlay ) return false;
-        
+
         if ( parseFloat(user.style.top) > ( container.offsetTop + 80) ) { 
             user.style.top = (user.offsetTop - 90) + 'px';
+            fuel.take();
         }
 
-
-        starPoints.forEach(point => {
+        starCore.getAll().forEach(point => {
             if ( isCollide( user, point ) ) { 
                 starCore.clear(point);
                 store.dispatch({ type: 'stars/increment' });
-                console.log();
             }
         });
 
