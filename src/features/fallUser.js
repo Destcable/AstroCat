@@ -3,6 +3,7 @@ import container from "../elements/container";
 import { FALL_TIME, FALL_USER_PX } from "../config";
 
 let interval;
+let rotationAngle = 0; // начальный угол поворота
 
 const fallUser = {
     start: (user, container) => {
@@ -12,6 +13,8 @@ const fallUser = {
 
             if (userBottom < containerHeight) {
                 user.style.top = (user.offsetTop + FALL_USER_PX) + 'px';
+                rotationAngle += 5; // увеличиваем угол поворота на 5 градусов при каждом обновлении
+                user.style.transform = `rotate(${rotationAngle}deg)`; // применяем угол поворота
             }
         }, FALL_TIME);
     },

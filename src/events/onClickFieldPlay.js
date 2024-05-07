@@ -19,7 +19,7 @@ const onClickFieldPlay = (startClick, step = 80) => {
         if ( !fuel.get() ) return false;
         if ( !storeValues.isPlay ) return false;
 
-        if ( parseFloat(user.style.top) > ( container.offsetTop + 80) ) { 
+        if ( parseFloat(user.style.top) > ( container.offsetTop + 80) ) {
             user.style.top = (user.offsetTop - 90) + 'px';
             fuel.take();
         }

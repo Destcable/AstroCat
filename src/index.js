@@ -23,7 +23,7 @@ fallUser.waitStop(() => {
     store.dispatch({ type: 'isPlay/stop' });
 });
 
-onClickFieldPlay(startClick);
+onClickFieldPlay( startClick );
 
 function startClick() {
     store.dispatch({ type: 'isPlay/start' }); 
