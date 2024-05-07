@@ -8,7 +8,8 @@ const onClickFieldPlay = (user, container, step = 80) => {
     const starPoints = document.querySelectorAll('#star-point');
 
     container.onclick = () => { 
-
+        const storeValues = store.getState();
+         
         if ( !isStart ) {
             fallUser.start(user, container);
             isStart = true;
@@ -24,7 +25,7 @@ const onClickFieldPlay = (user, container, step = 80) => {
             if ( isCollide( user, point ) ) { 
                 starCore.clear(point);
                 store.dispatch({ type: 'stars/increment' });
-                console.log(store.getState().stars);
+                console.log();
             }
         });
 
