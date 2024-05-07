@@ -1,3 +1,4 @@
+import {Howler} from 'howler';
 import container from "./elements/container";
 import user from "./elements/user";
 import onClickFieldPlay from "./events/onClickFieldPlay";
@@ -5,6 +6,9 @@ import fallUser from "./features/fallUser";
 import fuel from "./features/fuel";
 import starCore from "./features/starCore";
 import store from "./reducer";
+import { VOLUME_SOUND } from './config';
+
+Howler.volume(VOLUME_SOUND)
 
 const body = document.querySelector('body');
 body.appendChild( container );

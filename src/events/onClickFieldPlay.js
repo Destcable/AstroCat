@@ -4,6 +4,7 @@ import starCore from "../features/starCore";
 import fuel from "../features/fuel";
 import store from "../reducer";
 import isCollide from "../utils/isCollide";
+import sound from "../features/sound";
 
 const onClickFieldPlay = (startClick, step = 80) => { 
     let isStart = false;
@@ -26,6 +27,7 @@ const onClickFieldPlay = (startClick, step = 80) => {
         starCore.getAll().forEach(point => {
             if ( isCollide( user, point ) ) { 
                 starCore.clear(point);
+                sound.playCoin();
                 store.dispatch({ type: 'stars/increment' });
             }
         });
