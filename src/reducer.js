@@ -6,11 +6,14 @@ function storeReducer(state = {
 }, action) {
     switch (action.type) {
         case 'stars/increment':
-            return { stars: state.stars += 1 }
+            state.stars += 1;
+            return state;
         case 'isPlay/start':
-            return { isPlay: state.isPlay = true };
+            state.isPlay = true;
+            return state;
         case 'isPlay/stop':
-            return { isPlay: state.isPlay = false };
+            state.isPlay = false;
+            return state;
         default:
             return state
     }

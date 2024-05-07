@@ -10,6 +10,8 @@ body.appendChild( container );
 starCore.generate( 20 );
 container.appendChild( user );
 
+store.dispatch({ type: 'isPlay/start' });
+
 fallUser.waitStop(() => { 
     console.log('Вы проиграли! Ваш счет: ' + store.getState().stars);
     fallUser.stop();
