@@ -1,5 +1,5 @@
 const container = document.createElement('div');
-    
+
 container.id = 'container';
 container.style.position = 'relative';
 container.style.height = '100%'

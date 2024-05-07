@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.2.0"
+    "vite": "5.2.0"
+  },
+  "dependencies": {
+    "redux": "5.0.1"
   }
 }

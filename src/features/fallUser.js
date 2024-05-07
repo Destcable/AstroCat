@@ -1,3 +1,6 @@
+import user from "../elements/user";
+import container from "../elements/container";
+
 let interval;
 
 const fallUser = {
@@ -8,10 +11,18 @@ const fallUser = {
 
             if (userBottom < containerHeight) {
                 user.style.top = (user.offsetTop + 10) + 'px';
-            } else {
-                console.log('Достигла');
             }
         }, 50);
+    },
+    waitStop: (callback) => { 
+        const observer = new MutationObserver(() => { 
+            const userBottom = user.offsetTop + user.offsetHeight;
+            if (userBottom >= container.clientHeight) { 
+                callback();
+            }
+        });
+        
+        observer.observe(user, { attributes: true, attributeFilter: ['style'] });
     },
     stop: () => {
         clearInterval(interval);
