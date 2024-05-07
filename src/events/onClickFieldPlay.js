@@ -16,8 +16,6 @@ const onClickFieldPlay = (user, container, step = 80) => {
             user.style.bottom = '90px'
         }
 
-        console.log(storeValues)
-
         if ( !storeValues.isPlay ) return false;
         
         if ( parseFloat(user.style.top) > ( container.offsetTop + 80) ) { 
