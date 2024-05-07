@@ -5,14 +5,12 @@ import fallUser from "./features/fallUser";
 import fuel from "./features/fuel";
 import starCore from "./features/starCore";
 import store from "./reducer";
-import isCollide from "./utils/isCollide";
 
 const body = document.querySelector('body');
 body.appendChild( container );
 starCore.generate( 20 );
 container.appendChild( user );
 
-store.dispatch({ type: 'isPlay/start' });
 
 fallUser.waitStop(() => { 
     console.log('Вы проиграли! Ваш счет: ' + store.getState().stars);
@@ -23,7 +21,8 @@ fallUser.waitStop(() => {
 
 onClickFieldPlay(startClick);
 
-function startClick() { 
+function startClick() {
+    store.dispatch({ type: 'isPlay/start' }); 
     fallUser.start(user, container);
     user.style.bottom = '90px';
     fuel.set(5);
