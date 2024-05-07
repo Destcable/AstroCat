@@ -14,6 +14,7 @@ fallUser.waitStop(() => {
     console.log('Вы проиграли! Ваш счет: ' + store.getState().stars);
     fallUser.stop();
     starCore.clearAll();
+    store.dispatch({ type: 'isPlay/stop' });
 });
 
 onClickFieldPlay(user, container);

@@ -9,11 +9,14 @@ const onClickFieldPlay = (user, container, step = 80) => {
 
     container.onclick = () => { 
         const storeValues = store.getState();
-         
+        
+        if ( !storeValues.isPlay ) return null; 
+
         if ( !isStart ) {
             fallUser.start(user, container);
             isStart = true;
             user.style.bottom = '90px'
+            store.dispatch({ type: 'isPlay/start' });
         }
         
         if ( parseFloat(user.style.top) > ( container.offsetTop + 80) ) { 
