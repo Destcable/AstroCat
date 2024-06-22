@@ -13,7 +13,7 @@ const fallUser = {
 
             if (userBottom < containerHeight) {
                 user.style.top = (user.offsetTop + FALL_USER_PX) + 'px';
-                rotationAngle += 5; // увеличиваем угол поворота на 5 градусов при каждом обновлении
+                rotationAngle += 10; // увеличиваем угол поворота на 5 градусов при каждом обновлении
                 user.style.transform = `rotate(${rotationAngle}deg)`; // применяем угол поворота
             }
         }, FALL_TIME);

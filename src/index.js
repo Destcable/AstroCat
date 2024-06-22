@@ -29,5 +29,5 @@ function startClick() {
     store.dispatch({ type: 'isPlay/start' }); 
     fallUser.start(user, container);
     user.style.bottom = '90px';
-    fuel.set(5);
+    fuel.set(300);
 };
